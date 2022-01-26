@@ -1,3 +1,5 @@
 import Search from './Search'
 import CardMovie from './CardMovie'
-export {Search, CardMovie}
+import NavBar from './NavBar'
+
+export {Search, CardMovie, NavBar}

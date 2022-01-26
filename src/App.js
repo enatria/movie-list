@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import {Search, CardMovie} from './components'
+// import './App.css';
+import {Search, CardMovie, NavBar} from './components'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Moviee</h1>
-      <Search />
+    <div className="App" onScroll={(e) => console.log(e)}>
+      {/* <h1>Moviee</h1> */}
+      <NavBar />
       <CardMovie/>
     </div>
   );
