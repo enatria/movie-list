@@ -2,7 +2,7 @@ import React from 'react'
 import Search from '../Search'
 import './style.css'
 
-const NavBar = () => {
+const NavBar = ({action}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <a className="navbar-brand" href="#a">Movies</a>
@@ -20,7 +20,7 @@ const NavBar = () => {
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
-          <Search />
+          <Search action={action} />
         </form>
       </div>
     </nav>
