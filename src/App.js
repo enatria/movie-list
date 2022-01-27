@@ -26,8 +26,17 @@ function App() {
   return (
     <div className="App" onScroll={(e) => console.log(e)}>
       <div className="container">
-      <NavBar action={searchMovies} />
-      <CardMovie/>
+        <NavBar action={searchMovies} />
+        <div className="row">
+        {
+          movies?.map(movie => (
+            <div className="col-6 col-md-3">
+                  
+            <CardMovie movie={ movie}/>
+            </div>
+          ))
+      }
+        </div>
       {movies.length > 0 && totalPage > 1 ?
       <Pagination
         totalPage={totalPage}

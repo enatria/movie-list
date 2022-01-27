@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from '../../logo.svg';
+import './index.css';
 
-function CardMovie() {
+function CardMovie({movie}) {
     return (
-        <div className="card-movie w-50">
+        <div className="card-movie my-4">
             <div className="card-img">
-                <img src={logo} alt="" className='w-100'/>
+                <img src={movie.Poster} alt="" className='w-100'/>
             </div>
             <div className="card-body">
-                Dont Look up
+                <p>{movie.Title}</p>
+                <span>{movie.Year}</span>
             </div>
         </div>
   );
