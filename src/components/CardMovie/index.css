@@ -1,10 +1,13 @@
-
-.card-body{
+.card-body {
     padding: 0;
     background-color: #393E46;
 }
 
 .card-body p {
-    background-color: none !important;
+    background-color: inherit !important;
     font-weight: 600;
+}
+
+.card-body span {
+    background-color: inherit !important;
 }
