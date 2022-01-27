@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App" onScroll={(e) => console.log(e)}>
-      {/* <h1>Moviee</h1> */}
+      <div className="container">
       <NavBar action={searchMovies} />
       <CardMovie/>
       {movies.length > 0 && totalPage > 1 ?
@@ -34,6 +34,7 @@ function App() {
         currentPage={currentPage}
         action={searchMovies}
         query={currentQuery} /> : null}
+      </div>
     </div>
   );
 }

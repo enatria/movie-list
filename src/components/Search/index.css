@@ -1,17 +1,12 @@
 .search-bar{
     background-color:#393E46 ;
-    padding:10px 14px;
+    padding:5px 8px;
     display: inline-block;
     border-radius: 8px;
-    min-height: 50px;
 }
 
 input{
     border: none;
     background-color: #393E46;
-    padding: 5px;
-    outline: white;
-    outline-style:solid;
-    outline-width: 1px;
-    border-radius: 5px;
+    padding: 4px;
 }
