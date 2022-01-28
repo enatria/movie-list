@@ -1,6 +1,6 @@
 // import './App.css';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {CardMovie, NavBar, Pagination} from './components'
 
 function App() {
@@ -8,6 +8,18 @@ function App() {
   const [totalPage, setTotalPage] = useState()
   const [currentPage, setCurrentPage] = useState(1)
   const [currentQuery, setcurrentQuery] = useState()
+
+  useEffect(() => {
+    axios.get(`https://omdbapi.com/?apiKey=a3fe6146&s=avengers&page=1`)
+      .then(res => {
+        setMovies(res.data.Search)
+        setTotalPage(
+          Math.ceil(Number(res.data.totalResults) / 10)
+        )
+        setCurrentPage(1)
+      })
+  }, []);
+  
   
   const searchMovies = (query, page = 1) => {
     axios.get(`https://omdbapi.com/?apiKey=a3fe6146&s=${query}&page=${page}`)
@@ -32,7 +44,7 @@ function App() {
           movies?.map(movie => (
             <div className="col-6 col-md-3">
                   
-            <CardMovie movie={ movie}/>
+              <CardMovie movie={movie} key={movie.imdbID}/>
             </div>
           ))
       }

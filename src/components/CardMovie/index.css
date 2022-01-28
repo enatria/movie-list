@@ -5,6 +5,11 @@
 }
 
 .card-body p {
-    background-color: none !important;
+    background-color: #393E46 !important;
     font-weight: 600;
+}
+
+.card-body span{
+    background-color: #393E46 !important;
+
 }
